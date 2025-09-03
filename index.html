@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فشرده‌ساز تصویر | کاهش حجم عکس</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>فشرده‌ساز تصویر</h1>
+            <p class="subtitle">تصاویر JPEG یا PNG خود را آپلود کنید و حجم آن‌ها را بدون افت کیفیت محسوس کاهش دهید.</p>
+        </header>
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" hidden>
+            <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <p class="upload-text">تصویر را اینجا بکشید و رها کنید یا <span class="browse-files">انتخاب کنید</span></p>
+            <p class="file-info">فقط فایل‌های JPG و PNG پشتیبانی می‌شوند.</p>
+        </div>
+        <div class="processing-section" id="processingSection" style="display: none;">
+            <div class="file-details">
+                <span id="fileNameDisplay" class="file-name"></span>
+                <span id="originalSizeDisplay" class="original-size"></span>
+            </div>
+            <div class="input-group">
+                <label for="targetSize">حجم هدف (کیلوبایت):</label>
+                <input type="number" id="targetSize" min="1" value="100" aria-label="حجم هدف به کیلوبایت">
+            </div>
+            <button id="compressBtn" class="btn primary-btn">شروع فشرده‌سازی</button>
+            <div id="statusMessage" class="status-message"></div>
+            <div class="download-section" id="downloadSection" style="display: none;">
+                <span id="compressedSizeDisplay" class="compressed-size"></span>
+                <a id="downloadLink" class="btn download-btn" download style="display: none;">
+                    <i class="fas fa-download"></i> دانلود تصویر فشرده
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 فشرده‌ساز تصویر. تمامی حقوق محفوظ است.</p>
+        <p>طراح سایت: دکتر علی صیادی</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.0/dist/browser-image-compression.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
